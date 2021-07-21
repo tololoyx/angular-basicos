@@ -1,0 +1,21 @@
+<h2>Heroes disponibles</h2>
+<button (click)="deletear()">Borrar</button>
+<ul>
+    <li *ngFor="let hero of heroesList">
+        {{hero}}
+    </li>
+</ul>
+
+<div *ngIf="heroeEliminado;else noEliminado">
+    <h3>Heroe eliminado: <small>{{heroeEliminado}}</small></h3>
+</div>
+
+<!-- El bloque de ng-template solo se ejecuta si se cumple el else
+de un ngIf  -->
+<ng-template #noEliminado>
+    <h3>No se ha eliminado nada compa</h3>
+</ng-template>
+
+
+
+
